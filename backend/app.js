@@ -19,8 +19,11 @@ app.use(express.static("public"));
 app.use(cookieParser());
 
 import userRouter from "./routes/user.routes.js"; 
+import companyRouter from "./routes/company.routes.js";
+
 
 app.use("/api/v1/user", userRouter);
+app.use("/api/v1/company", companyRouter);
 
 // Agar URL hai: http://localhost:8000/api/v1/user/register
 // Toh control 'userRouter' ke paas jayega, aur wahan se '/register' dhoondhega.
