@@ -99,5 +99,43 @@ const logout = asyncHandler(async (req, res) => {
         );
 });
 
-export { register, login, logout };
+const updateProfile = asyncHandler(async (req, res) => {
+    
+    const { fullname, email, phoneNumber, bio, skills } = req.body;
+    
+   //File handling (Resume/Photo) hum baad mein Multer se karenge.
+
+    
+    const userId = req.id; 
+
+    let user = await User.findById(userId);
+    if (!user) {
+        throw new ApiError(400, "User not found");
+    }
+    if(fullname) user.fullname = fullname;
+    if(email) user.email = email;
+    if(phoneNumber) user.phoneNumber = phoneNumber;
+    if(bio) user.profile.bio = bio;
+    if(skills) {
+        user.profile.skills = skills.split(",");
+    }
+
+    await user.save();
+
+
+    user = {
+        _id: user._id,
+        fullname: user.fullname,
+        email: user.email,
+        phoneNumber: user.phoneNumber,
+        role: user.role,
+        profile: user.profile
+    }
+
+    return res.status(200).json(
+        new ApiResponse(200, user, "Profile updated successfully.")
+    );
+});
+
+export { register, login, logout, updateProfile };
 
