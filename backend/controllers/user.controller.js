@@ -4,6 +4,8 @@ import jwt from "jsonwebtoken";
 import { asyncHandler } from "../utils/asyncHandler.js";
 import { ApiError } from "../utils/ApiError.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
+import getDataUri from "../utils/datauri.js";
+import cloudinary from "../utils/cloudinary.js";
 
 
 const register = asyncHandler(async (req, res) => {
@@ -12,7 +14,10 @@ const register = asyncHandler(async (req, res) => {
     if (!fullname || !email || !phoneNumber || !password || !role) {
         throw new ApiError(400, "Something is missing");
     }
-
+    
+    const file = req.file;
+    const fileUri = getDataUri(file);
+    const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
     const userExists = await User.findOne({ email });
     if (userExists) {
         throw new ApiError(400, "User already exists with this email.");
@@ -28,7 +33,7 @@ const register = asyncHandler(async (req, res) => {
         password: hashedPassword,
         role,
         profile: {
-            profilePhoto: "" // Abhi ke liye empty, baad mein Cloudinary se laa denge 
+            profilePhoto: cloudResponse.secure_url,//cloudinary se lii hai .bro..
         }
     });
 
@@ -104,7 +109,10 @@ const updateProfile = asyncHandler(async (req, res) => {
     const { fullname, email, phoneNumber, bio, skills } = req.body;
     
    //File handling (Resume/Photo) hum baad mein Multer se karenge.
-
+   //cloudinary
+   const file = req.file;
+   const fileUri = getDataUri(file);
+   const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
     
     const userId = req.id; 
 
@@ -116,8 +124,11 @@ const updateProfile = asyncHandler(async (req, res) => {
     if(email) user.email = email;
     if(phoneNumber) user.phoneNumber = phoneNumber;
     if(bio) user.profile.bio = bio;
-    if(skills) {
-        user.profile.skills = skills.split(",");
+    if(skills) user.profile.skills = skillsArray;
+
+    if(cloudResponse){
+        user.profile.resume = cloudResponse.secure_url// save the cloudinary url
+        user.profile.resumeOriginalName = file.originalname
     }
 
     await user.save();
