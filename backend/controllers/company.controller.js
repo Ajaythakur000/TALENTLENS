@@ -2,6 +2,10 @@ import { Company } from "../models/company.model.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
 import { ApiError } from "../utils/ApiError.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
+import getDataUri from "../utils/datauri.js";
+import cloudinary from "../utils/cloudinary.js";
+
+
 
 export const registerCompany = asyncHandler(async (req, res) => {
     
@@ -64,8 +68,10 @@ export const updateCompany = asyncHandler(async (req, res) => {
     const { name, description, website, location } = req.body;
     
     // Note: Cloudinary (Logo) wala kaam hum "File Handling Day" par karenge.
+    const fileUri = getDataUri(file);
+    const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
+    const logo = cloudResponse.secure_url;
 
-    
     const company = await Company.findByIdAndUpdate(req.params.id, 
         {
             name,
