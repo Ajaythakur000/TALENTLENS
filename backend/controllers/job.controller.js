@@ -79,7 +79,7 @@ export const getAllJobs = asyncHandler(async (req, res) => {
 export const getJobById = asyncHandler(async (req, res) => {
     const jobId = req.params.id;
     
-    // Yahan hum 'applications' ko bhi populate karenge (Ye Part 4 mein kaam aayega)
+    // Yahan hum 'applications' ko bhi populate karenge 
     const job = await Job.findById(jobId).populate({
         path:"applications"
     });
