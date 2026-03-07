@@ -12,8 +12,8 @@ import {
     REGISTER,
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
-//import companySlice from "./companySlice";
-//import applicationSlice from "./applicationSlice";
+import companySlice from "./companySlice";
+import applicationSlice from "./applicationSlice";
 
 const persistConfig = {
     key: 'root',
@@ -25,7 +25,7 @@ const rootReducer = combineReducers({
     auth:authSlice,
     job:jobSlice,
     company:companySlice,
-    application:applicationSlice 
+    application:applicationSlice
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
@@ -33,6 +33,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 const store = configureStore({
     reducer: persistedReducer,
+    devTools: true,
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
             serializableCheck: {
@@ -40,4 +41,5 @@ const store = configureStore({
             },
         }),
 });
+export const persistor = persistStore(store);
 export default store;

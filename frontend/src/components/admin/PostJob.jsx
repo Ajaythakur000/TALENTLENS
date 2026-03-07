@@ -34,8 +34,8 @@ const PostJob = () => {
     };
 
     const selectChangeHandler = (value) => {
-        const selectedCompany = companies.find((company)=> company.name.toLowerCase() === value);
-        setInput({...input, companyId:selectedCompany._id});
+        const selectedCompany = companies?.find((company)=> company?.name?.toLowerCase() === value);
+        setInput({...input, companyId:selectedCompany?._id});
     };
 
     const submitHandler = async (e) => {
@@ -136,7 +136,7 @@ const PostJob = () => {
                             />
                         </div>
                         <div>
-                            <Label>No of Postion</Label>
+                            <Label>No. of Positions</Label>
                             <Input
                                 type="number"
                                 name="position"
@@ -146,7 +146,7 @@ const PostJob = () => {
                             />
                         </div>
                         {
-                            companies.length > 0 && (
+                            companies?.length > 0 && (
                                 <Select onValueChange={selectChangeHandler}>
                                     <SelectTrigger className="w-45">
                                         <SelectValue placeholder="Select a Company" />
@@ -154,9 +154,9 @@ const PostJob = () => {
                                     <SelectContent>
                                         <SelectGroup>
                                             {
-                                                companies.map((company) => {
+                                                companies?.map((company) => {
                                                     return (
-                                                        <SelectItem value={company?.name?.toLowerCase()}>{company.name}</SelectItem>
+                                                        <SelectItem key={company._id} value={company?.name?.toLowerCase()}>{company?.name}</SelectItem>
                                                     )
                                                 })
                                             }
@@ -171,7 +171,7 @@ const PostJob = () => {
                         loading ? <Button className="w-full my-4"> <Loader2 className='mr-2 h-4 w-4 animate-spin' /> Please wait </Button> : <Button type="submit" className="w-full my-4">Post New Job</Button>
                     }
                     {
-                        companies.length === 0 && <p className='text-xs text-red-600 font-bold text-center my-3'>*Please register a company first, before posting a jobs</p>
+                        companies?.length === 0 && <p className='text-xs text-red-600 font-bold text-center my-3'>*You need to register a company before posting a job.</p>
                     }
                 </form>
             </div>

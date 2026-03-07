@@ -110,10 +110,12 @@ const updateProfile = asyncHandler(async (req, res) => {
     
    //File handling (Resume/Photo) hum baad mein Multer se karenge.
    //cloudinary
-   const file = req.file;
-   const fileUri = getDataUri(file);
-   const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
-    
+  let cloudResponse;
+
+if(req.file){
+   const fileUri = getDataUri(req.file);
+   cloudResponse = await cloudinary.uploader.upload(fileUri.content);
+}
     const userId = req.id; 
 
     let user = await User.findById(userId);
@@ -124,8 +126,10 @@ const updateProfile = asyncHandler(async (req, res) => {
     if(email) user.email = email;
     if(phoneNumber) user.phoneNumber = phoneNumber;
     if(bio) user.profile.bio = bio;
-    if(skills) user.profile.skills = skillsArray;
-
+   if(skills){
+   const skillsArray = skills.split(",");
+   user.profile.skills = skillsArray;
+}
     if(cloudResponse){
         user.profile.resume = cloudResponse.secure_url// save the cloudinary url
         user.profile.resumeOriginalName = file.originalname

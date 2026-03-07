@@ -15,6 +15,7 @@ const Navbar = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
+    console.log("Navbar user:", user);
     const logoutHandler = async () => {
         try {
             const res = await axios.get(`${USER_API_END_POINT}/logout`, { withCredentials: true });
@@ -32,7 +33,7 @@ const Navbar = () => {
         <div className='bg-white'>
             <div className='flex items-center justify-between mx-auto max-w-7xl h-16'>
                 <div>
-                    <h1 className='text-2xl font-bold'>Job<span className='text-[#F83002]'>Portal</span></h1>
+                    <h1 className='text-2xl font-bold'>TALENT<span className='text-[#F83002]'>LENS</span></h1>
                 </div>
                 <div className='flex items-center gap-12'>
                     <ul className='flex font-medium items-center gap-5'>
