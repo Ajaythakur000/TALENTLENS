@@ -28,6 +28,10 @@ const Login = () => {
 
     const submitHandler = async (e) => {
         e.preventDefault();
+        if(!input.role){
+            toast.error("Please select a role")
+            return;
+        }
         try {
             dispatch(setLoading(true));
             const res = await axios.post(`${USER_API_END_POINT}/login`, input, {
@@ -38,17 +42,18 @@ const Login = () => {
             });
            console.log("Login response:", res.data);
             if (res.data?.data?.user) {
-    dispatch(setUser(res.data.data.user));
-    toast.success(res.data.message);
+                dispatch(setUser(res.data.data.user));
+                toast.success(res.data.message);
 }
         } catch (error) {
             console.log(error);
-            toast.error(error.response?.data?.message || "Login failed!");
+            toast.error(error?.response?.data?.message ||error.message ||  "Login failed!");
         } finally {
             dispatch(setLoading(false));
         }
     }
     useEffect(() => {
+        console.log("Redux user changed:", user);
     if (user) {
         if (user.role === "recruiter") {
             navigate("/admin/companies");

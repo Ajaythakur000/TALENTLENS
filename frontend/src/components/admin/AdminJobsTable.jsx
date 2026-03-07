@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom'
 
 const AdminJobsTable = () => { 
     const {allAdminJobs, searchJobByText} = useSelector(store=>store.job)  ;
-    const [filterJobs, setFilterJobs] = useState(allAdminJobs);
+    const [filterJobs, setFilterJobs] = useState(allAdminJobs|| []);
     const navigate = useNavigate();
 
     useEffect(()=>{ 
@@ -19,7 +19,7 @@ const AdminJobsTable = () => {
             };
             return job?.title?.toLowerCase().includes(searchJobByText.toLowerCase()) || job?.company?.name?.toLowerCase().includes(searchJobByText.toLowerCase());
         });
-        setFilterJobs(filteredJobs);
+        setFilterJobs(filteredJobs|| []);
     },[allAdminJobs,searchJobByText])
     return (
         <div>

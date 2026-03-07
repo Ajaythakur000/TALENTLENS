@@ -7,6 +7,9 @@ import { ApiResponse } from "../utils/ApiResponse.js";
 //1. POST JOB (Recruiter side)...admin doing it 
 
 export const postJob = asyncHandler(async (req, res) => {
+
+    console.log("BODY:", req.body)
+console.log("USER:", req.id)
     const { title, description, requirements, salary, location, jobType, experience, position, companyId } = req.body;
     const userId = req.id;
 
@@ -19,10 +22,10 @@ export const postJob = asyncHandler(async (req, res) => {
         title,
         description,
         requirements: requirements.split(","),
-        salary: Number(salary),
+        salary: Number(salary.replace(/[^0-9]/g, "")),
         location,
         jobType,
-        experienceLevel: experience,
+        experienceLevel: Number(experience),
         position,
         company: companyId,
         created_by: userId
@@ -38,10 +41,9 @@ export const postJob = asyncHandler(async (req, res) => {
 export const getAdminJobs = asyncHandler(async (req, res) => {
     const adminId = req.id;
 
-    const jobs = await Job.find({ created_by: adminId }).populate({
-        path: 'company',
-        createdAt: -1 // Newest jobs pehle dikhengi
-    });
+    const jobs = await Job.find({ created_by: adminId })
+    .populate("company")
+    .sort({ createdAt: -1 });
 
     if (!jobs) {
         throw new ApiError(404, "Jobs not found.");

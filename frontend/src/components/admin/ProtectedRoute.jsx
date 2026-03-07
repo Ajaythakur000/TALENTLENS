@@ -1,22 +1,22 @@
-import { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
-const ProtectedRoute = ({children}) => {
-    const {user} = useSelector(store=>store.auth);
+const ProtectedRoute = ({ children }) => {
 
-    const navigate = useNavigate();
+    const { user } = useSelector((store) => store.auth);
 
-    useEffect(()=>{
-        if(!user || user?.role !== 'recruiter'){
-            navigate("/");
-        }
-    },[user, navigate]);
+    // agar login nahi hai
+    if (!user) {
+        return <Navigate to="/login" />;
+    }
 
-    return (
-        <>
-        {children}
-        </>
-    )
+    // agar recruiter nahi hai
+    if (user.role !== "recruiter") {
+        return <Navigate to="/" />;
+    }
+
+    return children;
 };
+
 export default ProtectedRoute;

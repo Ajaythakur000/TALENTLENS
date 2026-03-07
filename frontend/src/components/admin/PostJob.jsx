@@ -48,7 +48,7 @@ const PostJob = () => {
                 },
                 withCredentials:true
             });
-            if(res.data.success){
+            if(res.status === 201){
                 toast.success(res.data.message);
                 navigate("/admin/jobs");
             }

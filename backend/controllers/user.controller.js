@@ -15,10 +15,12 @@ const register = asyncHandler(async (req, res) => {
         throw new ApiError(400, "Something is missing");
     }
     
-    const file = req.file;
-    const fileUri = getDataUri(file);
-    const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
-    const userExists = await User.findOne({ email });
+    let cloudResponse = null;
+
+    if (req.file) {
+    const fileUri = getDataUri(req.file);
+    cloudResponse = await cloudinary.uploader.upload(fileUri.content);
+} const userExists = await User.findOne({ email });
     if (userExists) {
         throw new ApiError(400, "User already exists with this email.");
     }
@@ -33,12 +35,12 @@ const register = asyncHandler(async (req, res) => {
         password: hashedPassword,
         role,
         profile: {
-            profilePhoto: cloudResponse.secure_url,//cloudinary se lii hai .bro..
+            profilePhoto: cloudResponse ? cloudResponse.secure_url : ""//cloudinary se lii hai .bro..
         }
     });
 
     return res.status(201).json(
-        new ApiResponse(201, null, "Account created successfully.")
+        new ApiResponse(201, {}, "Account created successfully.")
     );
 });
 
@@ -87,6 +89,7 @@ const login = asyncHandler(async (req, res) => {
         .cookie("token", token, { 
             maxAge: 1 * 24 * 60 * 60 * 1000, // 1 Day
             httpOnly: true, // JavaScript access nahi kar sakta (XSS Protection)
+            secure: process.env.NODE_ENV === "production",
             sameSite: 'strict' // CSRF Protection
         })
         .json(
@@ -98,9 +101,14 @@ const login = asyncHandler(async (req, res) => {
 const logout = asyncHandler(async (req, res) => {
 
     return res.status(200)
-        .cookie("token", "", { maxAge: 0 }) 
+        .cookie("token", "", { 
+            maxAge: 0,
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: "strict"
+        }) 
         .json(
-            new ApiResponse(200, null, "Logged out successfully.")
+            new ApiResponse(200, {}, "Logged out successfully.")
         );
 });
 
@@ -130,10 +138,10 @@ if(req.file){
    const skillsArray = skills.split(",");
    user.profile.skills = skillsArray;
 }
-    if(cloudResponse){
-        user.profile.resume = cloudResponse.secure_url// save the cloudinary url
-        user.profile.resumeOriginalName = file.originalname
-    }
+   if (cloudResponse) {
+    user.profile.resume = cloudResponse.secure_url;
+    user.profile.resumeOriginalName = req.file.originalname;
+}
 
     await user.save();
 

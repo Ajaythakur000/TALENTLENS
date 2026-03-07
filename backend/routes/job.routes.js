@@ -8,7 +8,7 @@ const router = Router();
 router.route("/post").post(isAuthenticated, postJob);
 
 // 2. Saari Jobs dekhna 
-router.route("/get").get(isAuthenticated, getAllJobs);
+router.route("/get").get(getAllJobs);
 
 // 3. Recruiter ki apni jobs (Admin dashboard)
 router.route("/getadminjobs").get(isAuthenticated, getAdminJobs);
