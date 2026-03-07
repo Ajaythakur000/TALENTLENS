@@ -5,21 +5,47 @@ import Job from './Job';
 import { useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 
-
 const Jobs = () => {
     const { allJobs, searchedQuery } = useSelector(store => store.job);
-    const [filterJobs, setFilterJobs] = useState(allJobs);
+    const [filterJobs, setFilterJobs] = useState(allJobs || []);
 
     useEffect(() => {
         if (searchedQuery) {
             const filteredJobs = allJobs?.filter((job) => {
-                return job?.title?.toLowerCase().includes(searchedQuery.toLowerCase()) ||
-                    job?.description?.toLowerCase().includes(searchedQuery.toLowerCase()) ||
-                    job?.location?.toLowerCase().includes(searchedQuery.toLowerCase())
-            })
-            setFilterJobs(filteredJobs)
+                const query = searchedQuery.toLowerCase();
+                
+                // Text matching (Location, Title, etc.)
+                let matchesText = job?.title?.toLowerCase().includes(query) ||
+                    job?.description?.toLowerCase().includes(query) ||
+                    job?.location?.toLowerCase().includes(query);
+
+                // Salary matching logic
+                let matchesSalary = false;
+                if (query.includes('lpa') && job?.salary) {
+                    const salaryStr = query.replace('lpa', '').trim(); // "15-25" ya "60+" bachega
+                    
+                    if (salaryStr.includes('-')) {
+                        // Agar "15-25" jaisa hai
+                        const [min, max] = salaryStr.split('-').map(Number);
+                        if (job.salary >= min && job.salary <= max) {
+                            matchesSalary = true;
+                        }
+                    } else if (salaryStr.includes('+')) {
+                        // Agar "60+" jaisa hai
+                        const min = Number(salaryStr.replace('+', ''));
+                        if (job.salary >= min) {
+                            matchesSalary = true;
+                        }
+                    }
+                }
+
+                // Agar dono mein se koi ek bhi true hai, toh job dikhao
+                return matchesText || matchesSalary;
+            });
+            
+            setFilterJobs(filteredJobs);
         } else {
-            setFilterJobs(allJobs)
+            setFilterJobs(allJobs || []);
         }
     }, [allJobs, searchedQuery]);
 
@@ -53,8 +79,6 @@ const Jobs = () => {
                     }
                 </div>
             </div>
-
-
         </div>
     )
 }

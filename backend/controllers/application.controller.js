@@ -86,3 +86,23 @@ export const updateStatus = asyncHandler(async (req, res) => {
         new ApiResponse(200, {}, "Status updated successfully.")
     );
 });
+
+export const getAppliedJobs = asyncHandler(async (req, res) => {
+    const userId = req.id;
+    const application = await Application.find({ applicant: userId })
+        .sort({ createdAt: -1 })
+        .populate({
+            path: 'job',
+            populate: {
+                path: 'company'
+            }
+        });
+
+    if (!application) {
+        throw new ApiError(404, "No Applications");
+    }
+
+    return res.status(200).json(
+        new ApiResponse(200, application, "Applied jobs fetched successfully.")
+    );
+});
