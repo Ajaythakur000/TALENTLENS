@@ -1,106 +1,97 @@
 <div align="center">
 
-<br/>
-
-```
-████████╗ █████╗ ██╗     ███████╗███╗   ██╗████████╗██╗     ███████╗███╗   ██╗███████╗
-╚══██╔══╝██╔══██╗██║     ██╔════╝████╗  ██║╚══██╔══╝██║     ██╔════╝████╗  ██║██╔════╝
-   ██║   ███████║██║     █████╗  ██╔██╗ ██║   ██║   ██║     █████╗  ██╔██╗ ██║███████╗
-   ██║   ██╔══██║██║     ██╔══╝  ██║╚██╗██║   ██║   ██║     ██╔══╝  ██║╚██╗██║╚════██║
-   ██║   ██║  ██║███████╗███████╗██║ ╚████║   ██║   ███████╗███████╗██║ ╚████║███████║
-   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚══════╝╚═╝  ╚═══╝╚══════╝
-```
-
-### *Where talent meets opportunity.*
+<img src="https://capsule-render.vercel.app/api?type=waving&color=EAB308&height=200&section=header&text=TalentLens&fontSize=80&fontColor=000000&fontAlignY=38&desc=Where%20Talent%20Meets%20Opportunity&descAlignY=60&descSize=18&descColor=000000" width="100%"/>
 
 <br/>
 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=22&duration=3000&pause=1000&color=EAB308&center=true&vCenter=true&width=600&lines=Full+Stack+MERN+Job+Portal+%F0%9F%9A%80;Built+for+Candidates+%26+Recruiters+%F0%9F%8F%A2;Dark+Theme+%C3%97+Gold+Accent+UI+%E2%9C%A8;NIT+Allahabad+%7C+CSE+Project+%F0%9F%8E%93)](https://git.io/typing-svg)
+
+<br/>
+
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=Cloudinary&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
-
-<br/>
-
-> **TalentLens** is a full-stack MERN job portal that bridges the gap between ambitious candidates and forward-thinking companies — with a sleek, modern, and fast UI built for the next generation of hiring.
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
 
 <br/>
 
 [![Stars](https://img.shields.io/github/stars/YOUR_USERNAME/TalentLens?style=social)](https://github.com/YOUR_USERNAME/TalentLens)
 [![Forks](https://img.shields.io/github/forks/YOUR_USERNAME/TalentLens?style=social)](https://github.com/YOUR_USERNAME/TalentLens/fork)
-[![Issues](https://img.shields.io/github/issues/YOUR_USERNAME/TalentLens?color=gold)](https://github.com/YOUR_USERNAME/TalentLens/issues)
+[![Issues](https://img.shields.io/github/issues/YOUR_USERNAME/TalentLens?color=EAB308)](https://github.com/YOUR_USERNAME/TalentLens/issues)
 
 </div>
 
 ---
 
-## 📸 Preview
+## 📌 Overview
 
-> *(Screenshots coming soon — UI is 🔥)*
+**TalentLens** is a full-stack **MERN job portal** where candidates can search and apply for jobs while recruiters can post openings and manage applicants — all wrapped in a premium dark-themed UI.
 
-| Landing Page | Job Listings | Recruiter Dashboard |
-|:---:|:---:|:---:|
-| ![landing](screenshots/landing.png) | ![jobs](screenshots/jobpage.png) | ![dashboard](screenshots/dashboard.png) |
+The platform provides secure authentication, resume uploads, company management, and an admin dashboard for recruiters.
 
 ---
 
-## ⚡ What is TalentLens?
+## 📸 Screenshots
 
-TalentLens is not just another job board. It's a **complete recruitment ecosystem** — built ground-up with a dark-themed, gold-accented UI that feels premium and modern.
+| Home Page | Jobs Page |
+|:---------:|:---------:|
+| ![](Screenshots/home.png) | ![](Screenshots/jobs.png) |
 
-- 🎯 **Candidates** can search, filter, browse, and apply to jobs effortlessly
-- 🏢 **Recruiters** can post openings, manage listings, and accept/reject applicants in real time
-- 🔒 **Auth** is JWT-secured with bcrypt-hashed passwords — no shortcuts
-- ☁️ **Cloud-native** — resumes and company logos go directly to Cloudinary
-- 🚀 **Blazing fast** — Vite-powered frontend, optimized Redux state
+| Login | Signup |
+|:-----:|:------:|
+| ![](Screenshots/login.png) | ![](Screenshots/signup.png) |
+
+| Profile | Create Job |
+|:-------:|:----------:|
+| ![](Screenshots/profile.png) | ![](Screenshots/createjob.png) |
+
+| Applicants Dashboard | Company Registration |
+|:--------------------:|:--------------------:|
+| ![](Screenshots/applicants.png) | ![](Screenshots/companyregister.png) |
 
 ---
 
 ## ✨ Features
 
 <details>
-<summary><b>👤 For Candidates</b></summary>
+<summary><b>👤 Candidate Features</b></summary>
 <br/>
 
-- 🔐 Secure Signup / Login with JWT
-- 📋 Browse and search jobs by keyword, location, or category
-- 📂 Upload resume (PDF) — stored on Cloudinary
-- 💼 View detailed job descriptions
-- ✅ Apply to jobs with one click
+- 🔐 Secure signup & login via JWT
+- 🔍 Browse and search jobs by keyword / category
+- 📄 Apply with resume upload (PDF → Cloudinary)
 - 📊 Track all applied jobs and their statuses
-- 🙍 Manage full profile — name, bio, skills, contact, resume
+- 🙍 Manage full profile — bio, skills, contact, resume
 
 </details>
 
 <details>
-<summary><b>🏢 For Recruiters</b></summary>
+<summary><b>🏢 Recruiter Features</b></summary>
 <br/>
 
-- 🏭 Register and setup company profile with logo
+- 🏭 Create and manage company profiles with logo
 - 📝 Post new job openings with full details
-- 📋 Manage all job listings from admin panel
 - 👥 View all applicants per job
-- ✅ Accept or ❌ Reject applicants — status updates instantly
-- 🔍 See applicant resumes and contact info directly
+- ✅ Accept or ❌ Reject applicants — updates instantly
+- 🗂 Admin dashboard to manage all listings
 
 </details>
 
 <details>
-<summary><b>⚙️ Platform-level</b></summary>
+<summary><b>⚙️ Platform Features</b></summary>
 <br/>
 
-- 🔑 JWT-based auth with HTTP-only cookies
+- 🔑 JWT auth with HTTP-only cookies
 - 🔒 Passwords hashed with bcrypt
-- 📁 File uploads via Multer + Cloudinary
-- ⚡ Redux Toolkit for global state
-- 🎞️ Framer Motion animations throughout
-- 📱 Fully responsive design
-- 🌑 Dark theme with gold accent design system
+- ☁️ File uploads via Multer + Cloudinary
+- ⚡ Global state with Redux Toolkit
+- 🎞️ Smooth animations via Framer Motion
+- 📱 Fully responsive UI
 
 </details>
 
@@ -108,31 +99,15 @@ TalentLens is not just another job board. It's a **complete recruitment ecosyste
 
 ## 🛠 Tech Stack
 
-### Frontend
-| Tech | Purpose |
-|------|---------|
-| **React 18** | UI library |
-| **Vite** | Build tool & dev server |
-| **Redux Toolkit** | Global state management |
-| **React Router v6** | Client-side routing |
-| **Tailwind CSS** | Utility-first styling |
-| **Framer Motion** | Page & component animations |
-| **Axios** | HTTP client |
-| **Lucide React** | Icon library |
+<div align="center">
 
-### Backend
-| Tech | Purpose |
-|------|---------|
-| **Node.js** | Runtime |
-| **Express.js** | Web framework |
-| **MongoDB** | NoSQL database |
-| **Mongoose** | ODM for MongoDB |
-| **JWT** | Auth tokens |
-| **bcrypt.js** | Password hashing |
-| **Multer** | File upload middleware |
-| **Cloudinary** | Cloud media storage |
-| **Cookie-parser** | Cookie handling |
-| **CORS** | Cross-origin requests |
+| Layer | Technologies |
+|:------|:------------|
+| **Frontend** | React, Vite, Redux Toolkit, React Router, Tailwind CSS, Framer Motion, Axios, Lucide Icons |
+| **Backend** | Node.js, Express.js, MongoDB, Mongoose, JWT, bcrypt.js |
+| **Storage** | Multer, Cloudinary |
+
+</div>
 
 ---
 
@@ -141,71 +116,52 @@ TalentLens is not just another job board. It's a **complete recruitment ecosyste
 ```
 TalentLens/
 │
+├── 📦 backend/
+│   ├── controllers/            # Route logic
+│   ├── models/                 # Mongoose schemas
+│   ├── routes/                 # Express routers
+│   ├── middleware/             # Auth guard, Multer config
+│   └── utils/                  # DB connect, Cloudinary config
+│
 ├── 📦 frontend/
-│   ├── public/
 │   └── src/
-│       ├── components/
-│       │   ├── shared/          # Navbar, Footer
-│       │   ├── ui/              # Reusable UI (shadcn components)
-│       │   └── admin/           # Recruiter-side components
-│       ├── hooks/               # Custom React hooks
-│       ├── redux/               # Store, slices (auth, job, application, company)
-│       ├── utils/               # Constants, helpers
+│       ├── components/         # UI components (Navbar, Footer, Cards...)
+│       │   ├── shared/         # Common across pages
+│       │   ├── ui/             # Reusable primitives
+│       │   └── admin/          # Recruiter-side views
+│       ├── hooks/              # Custom React hooks
+│       ├── redux/              # Store + slices (auth, job, application, company)
+│       ├── utils/              # Constants, API endpoints
 │       └── main.jsx
 │
-└── 📦 backend/
-    ├── controllers/             # Route handler logic
-    │   ├── user.controller.js
-    │   ├── job.controller.js
-    │   ├── company.controller.js
-    │   └── application.controller.js
-    ├── models/                  # Mongoose schemas
-    │   ├── user.model.js
-    │   ├── job.model.js
-    │   ├── company.model.js
-    │   └── application.model.js
-    ├── routes/                  # Express routers
-    ├── middleware/
-    │   ├── isAuthenticated.js   # JWT guard
-    │   └── multer.js            # File upload config
-    ├── utils/
-    │   ├── db.js                # MongoDB connection
-    │   └── cloudinary.js        # Cloudinary config
-    └── index.js                 # Entry point
+└── 📸 Screenshots/
 ```
 
 ---
 
 ## ⚙️ Getting Started
 
-### Prerequisites
-
-Make sure you have these installed:
-- [Node.js](https://nodejs.org/) `>= 18.x`
-- [MongoDB](https://www.mongodb.com/) (local or Atlas)
-- [Cloudinary](https://cloudinary.com/) account
-
-### 1. Clone the repo
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/TalentLens.git
+git clone https://github.com/Ajaythakur000/TalentLens.git
 cd TalentLens
 ```
 
-### 2. Setup Backend
+### 2. Backend Setup
 
 ```bash
 cd backend
 npm install
 ```
 
-Create a `.env` file inside `backend/`:
+Create `.env` inside `backend/`:
 
 ```env
 PORT=5000
-MONGO_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/talentlens
+MONGO_URI=your_mongodb_connection_string
 
-JWT_SECRET=your_super_secret_key_here
+JWT_SECRET=your_secret_key
 JWT_EXPIRY=7d
 
 CLOUDINARY_CLOUD_NAME=your_cloud_name
@@ -213,132 +169,94 @@ CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 ```
 
-Start the backend:
-
 ```bash
-npm run dev
+npm run dev     # Runs on http://localhost:5000
 ```
 
-Backend runs at → `http://localhost:5000`
-
----
-
-### 3. Setup Frontend
+### 3. Frontend Setup
 
 ```bash
 cd ../frontend
 npm install
 ```
 
-Create a `.env` file inside `frontend/`:
+Create `.env` inside `frontend/`:
 
 ```env
 VITE_API_BASE_URL=http://localhost:5000/api/v1
 ```
 
-Start the frontend:
-
 ```bash
-npm run dev
+npm run dev     # Runs on http://localhost:5173
 ```
-
-Frontend runs at → `http://localhost:5173`
 
 ---
 
-## 🔌 API Endpoints
+## 🔌 API Reference
 
 <details>
-<summary><b>👤 User Routes — <code>/api/v1/user</code></b></summary>
+<summary><b>User — <code>/api/v1/user</code></b></summary>
 
-| Method | Route | Auth | Description |
-|--------|-------|------|-------------|
+| Method | Endpoint | Auth | Description |
+|--------|----------|:----:|-------------|
 | POST | `/register` | ❌ | Register new user |
 | POST | `/login` | ❌ | Login & get JWT cookie |
-| GET | `/logout` | ✅ | Logout |
+| GET | `/logout` | ✅ | Logout user |
 | PUT | `/profile/update` | ✅ | Update profile |
 
 </details>
 
 <details>
-<summary><b>🏢 Company Routes — <code>/api/v1/company</code></b></summary>
+<summary><b>Company — <code>/api/v1/company</code></b></summary>
 
-| Method | Route | Auth | Description |
-|--------|-------|------|-------------|
+| Method | Endpoint | Auth | Description |
+|--------|----------|:----:|-------------|
 | POST | `/register` | ✅ | Register company |
-| GET | `/get` | ✅ | Get my companies |
+| GET | `/get` | ✅ | Get all my companies |
 | GET | `/get/:id` | ✅ | Get company by ID |
-| PUT | `/update/:id` | ✅ | Update company |
+| PUT | `/update/:id` | ✅ | Update company info |
 
 </details>
 
 <details>
-<summary><b>💼 Job Routes — <code>/api/v1/job</code></b></summary>
+<summary><b>Jobs — <code>/api/v1/job</code></b></summary>
 
-| Method | Route | Auth | Description |
-|--------|-------|------|-------------|
-| POST | `/post` | ✅ | Post a new job |
+| Method | Endpoint | Auth | Description |
+|--------|----------|:----:|-------------|
+| POST | `/post` | ✅ | Post new job |
 | GET | `/get` | ✅ | Get all jobs (with filters) |
-| GET | `/getadminjobs` | ✅ | Get recruiter's own jobs |
+| GET | `/getadminjobs` | ✅ | Recruiter's own jobs |
 | GET | `/get/:id` | ✅ | Get job by ID |
 
 </details>
 
 <details>
-<summary><b>📋 Application Routes — <code>/api/v1/application</code></b></summary>
+<summary><b>Applications — <code>/api/v1/application</code></b></summary>
 
-| Method | Route | Auth | Description |
-|--------|-------|------|-------------|
+| Method | Endpoint | Auth | Description |
+|--------|----------|:----:|-------------|
 | GET | `/apply/:id` | ✅ | Apply to a job |
 | GET | `/get` | ✅ | Get my applications |
-| GET | `/:id/applicants` | ✅ | Get applicants for a job |
+| GET | `/:id/applicants` | ✅ | All applicants for job |
 | POST | `/status/:id/update` | ✅ | Update application status |
 
 </details>
 
 ---
 
-## 🔐 Auth Flow
-
-```
-User fills Signup form
-        ↓
-POST /api/v1/user/register
-        ↓
-bcrypt hashes password → stored in MongoDB
-        ↓
-JWT token generated → sent as HTTP-only cookie
-        ↓
-Redux stores user info → Protected routes unlocked
-```
-
----
-
-## 🚀 Deployment (Coming Soon)
-
-| Service | Purpose |
-|---------|---------|
-| **Vercel** | Frontend deployment |
-| **Render / Railway** | Backend deployment |
-| **MongoDB Atlas** | Cloud database |
-| **Cloudinary** | Media storage |
-
----
-
 ## 🗺 Roadmap
 
-- [x] JWT Authentication
+- [x] JWT Authentication & role-based access
 - [x] Candidate & Recruiter flows
-- [x] Job listing & application system
-- [x] Cloudinary file uploads
-- [x] Dark-theme premium UI
-- [x] Real-time applicant status update
+- [x] Job listing, search & apply system
+- [x] Resume + Logo uploads via Cloudinary
+- [x] Real-time applicant status update (Accept / Reject)
+- [x] Dark-theme premium UI with gold accents
 - [ ] AI-powered job recommendations
 - [ ] Resume parser
 - [ ] Email notifications (Nodemailer)
-- [ ] Company analytics dashboard
-- [ ] Real-time chat (Socket.io)
-- [ ] Mobile app (React Native)
+- [ ] Real-time recruiter–candidate chat (Socket.io)
+- [ ] Mobile application
 
 ---
 
@@ -346,13 +264,8 @@ Redux stores user info → Protected routes unlocked
 
 <div align="center">
 
-<br/>
-
 **Ajay Thakur**
-
-*CSE Student @ NIT Allahabad*
-
-Built with 🔥 and a lot of `console.log()`s
+*CSE Student · MNNIT Allahabad*
 
 <br/>
 
@@ -363,34 +276,16 @@ Built with 🔥 and a lot of `console.log()`s
 
 ---
 
-## 🤝 Contributing
-
-Pull requests are welcome! For major changes, please open an issue first.
-
-```bash
-# Fork the repo
-git checkout -b feature/amazing-feature
-git commit -m 'Add amazing feature'
-git push origin feature/amazing-feature
-# Open a Pull Request
-```
-
----
-
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the **MIT License**. See `LICENSE` for details.
 
 ---
 
 <div align="center">
 
-<br/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=EAB308&height=120&section=footer" width="100%"/>
 
-If TalentLens helped you or impressed you — drop a ⭐ on GitHub. It means a lot!
-
-<br/>
-
-*Made with ❤️ by Ajay · NIT Allahabad*
+*If TalentLens helped you, drop a ⭐ on GitHub — it means a lot!*
 
 </div>
