@@ -30,7 +30,7 @@
 
 ## 📌 Overview
 
-**TalentLens** is a full-stack **MERN job portal** where candidates can search and apply for jobs while recruiters can post openings and manage applicants — all wrapped in a premium dark-themed UI.
+**TalentLens** is a full-stack **MERN job portal** platform that enables candidates to discover and apply for opportunities while helping recruiters publish openings, manage applications, and streamline the entire hiring process.
 
 The platform provides secure authentication, resume uploads, company management, and an admin dashboard for recruiters.
 
@@ -269,8 +269,8 @@ npm run dev     # Runs on http://localhost:5173
 
 <br/>
 
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_USERNAME)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_PROFILE)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ajaythakur000)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/ajayy-thakkurr)
 
 </div>
 
