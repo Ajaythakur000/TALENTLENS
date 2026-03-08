@@ -9,16 +9,18 @@ import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
-  useGetAllJobs();
-  const { user } = useSelector(store => store.auth);
-  const navigate = useNavigate();
+  useGetAllJobs()
+  const { user } = useSelector(store => store.auth)
+  const navigate = useNavigate()
+
   useEffect(() => {
     if (user?.role === 'recruiter') {
-      navigate("/admin/companies");
+      navigate('/admin/companies')
     }
-  }, [user,navigate]);
+  }, [user, navigate])
+
   return (
-    <div>
+    <div style={{ background: '#060606', minHeight: '100vh' }}>
       <Navbar />
       <HeroSection />
       <CategoryCarousel />

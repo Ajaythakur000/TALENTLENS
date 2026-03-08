@@ -94,3 +94,36 @@ export const getJobById = asyncHandler(async (req, res) => {
         new ApiResponse(200, job, "Job fetched successfully.")
     );
 });
+
+// 5. UPDATE JOB
+export const updateJob = asyncHandler(async (req, res) => {
+    const jobId = req.params.id;
+    const { title, description, requirements, salary, location, jobType, experienceLevel, position } = req.body;
+
+    // Jo data update karna hai usko prepare kar rahe hain
+    const updateData = { title, description, location, jobType, position };
+
+    if (requirements) {
+        // Agar frontend se array aa raha hai toh thik, warna string ko array mein badlo
+        updateData.requirements = Array.isArray(requirements) ? requirements : requirements.split(",");
+    }
+    if (salary) {
+        updateData.salary = typeof salary === 'string' ? Number(salary.replace(/[^0-9]/g, "")) : salary;
+    }
+    if (experienceLevel) {
+        updateData.experienceLevel = Number(experienceLevel);
+    }
+
+    const job = await Job.findByIdAndUpdate(jobId, updateData, { new: true });
+
+    if (!job) {
+        throw new ApiError(404, "Job not found.");
+    }
+
+    // Success response but without extra nesting
+    return res.status(200).json({
+        success: true,
+        message: "Job updated successfully.",
+        job
+    });
+});

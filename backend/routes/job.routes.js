@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { postJob, getAllJobs, getJobById, getAdminJobs } from "../controllers/job.controller.js";
+import { postJob, getAllJobs, getJobById, getAdminJobs, updateJob } from "../controllers/job.controller.js";
 import isAuthenticated from "../middlewares/isAuthenticated.js";
 
 const router = Router();
@@ -15,5 +15,6 @@ router.route("/getadminjobs").get(isAuthenticated, getAdminJobs);
 
 // 4. Specific Job detail (ID ke saath)
 router.route("/get/:id").get(isAuthenticated, getJobById);
+router.route("/update/:id").put(isAuthenticated, updateJob);
 
 export default router;
