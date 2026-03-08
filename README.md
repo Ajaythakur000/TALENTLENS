@@ -4,7 +4,7 @@
 
 <br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=22&duration=3000&pause=1000&color=EAB308&center=true&vCenter=true&width=600&lines=Full+Stack+MERN+Job+Portal+%F0%9F%9A%80;Built+for+Candidates+%26+Recruiters+%F0%9F%8F%A2;Dark+Theme+%C3%97+Gold+Accent+UI+%E2%9C%A8;NIT+Allahabad+%7C+CSE+Project+%F0%9F%8E%93)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=22&duration=3000&pause=1000&color=EAB308&center=true&vCenter=true&width=600&lines=Full+Stack+MERN+Job+Portal+%F0%9F%9A%80;Built+for+Candidates+%26+Recruiters+%F0%9F%8F%A2;NIT+Allahabad+%7C+CSE+Project+%F0%9F%8E%93)](https://git.io/typing-svg)
 
 <br/>
 
