@@ -244,17 +244,23 @@ npm run dev     # Runs on http://localhost:5173
 
 ---
 
-## 🗺 Roadmap
+## 🗺 Implemented
 
-- [x] JWT Authentication & role-based access
-- [x] Candidate & Recruiter flows
-- [x] Job listing, search & apply system
-- [x] Resume + Logo uploads via Cloudinary
-- [x] Real-time applicant status update (Accept / Reject)
-- [x] Dark-theme premium UI with gold accents
+- [x] Secure authentication with JWT & role-based access
+- [x] Candidate & recruiter workflows
+- [x] Job listing, browsing and search functionality
+- [x] Job application system for candidates
+- [x] Recruiter dashboard for managing jobs
+- [x] Applicant management with status updates (Accept / Reject)
+- [x] Resume and company logo uploads via Cloudinary
+- [x] Protected routes and authorization middleware
+- [x] Responsive UI with modern React + Tailwind layout
+
+### 🚧 Upcoming Enhancements
+
 - [ ] AI-powered job recommendations
-- [ ] Resume parser
-- [ ] Email notifications (Nodemailer)
+- [ ] Resume parser for automatic candidate profiling
+- [ ] Email notifications for application updates
 - [ ] Real-time recruiter–candidate chat (Socket.io)
 - [ ] Mobile application
 
@@ -264,7 +270,7 @@ npm run dev     # Runs on http://localhost:5173
 
 <div align="center">
 
-**Ajay Thakur**
+**AJAY THAKUR**
 *CSE Student · MNNIT Allahabad*
 
 <br/>
