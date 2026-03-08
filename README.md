@@ -52,7 +52,7 @@ The platform provides secure authentication, resume uploads, company management,
 
 | Applicants Dashboard | Company Registration |
 |:--------------------:|:--------------------:|
-| ![](Screenshots/applicants.png) | ![](Screenshots/companyregister.png) |
+| ![](Screenshots/applicants.png) | ![](Screenshots/companyRegister.png) |
 
 ---
 
@@ -251,7 +251,7 @@ npm run dev     # Runs on http://localhost:5173
 - [x] Job listing, browsing and search functionality
 - [x] Job application system for candidates
 - [x] Recruiter dashboard for managing jobs
-- [x] Applicant management with status updates (Accept / Reject)
+- [x] Applicant management with status updates
 - [x] Resume and company logo uploads via Cloudinary
 - [x] Protected routes and authorization middleware
 - [x] Responsive UI with modern React + Tailwind layout
