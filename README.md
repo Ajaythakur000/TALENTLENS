@@ -4,7 +4,7 @@
 
 <br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=22&duration=3000&pause=1000&color=EAB308&center=true&vCenter=true&width=600&lines=Full+Stack+MERN+Job+Portal+%F0%9F%9A%80;Built+for+Candidates+%26+Recruiters+%F0%9F%8F%A2;NIT+Allahabad+%7C+CSE+Project+%F0%9F%8E%93)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=22&duration=3000&pause=1000&color=EAB308&center=true&vCenter=true&width=800&lines=full-stack+MERN-based+recruitment+platform+%F0%9F%9A%80;Built+for+Candidates+%26+Recruiters+%F0%9F%8F%A2;NIT+Allahabad+%7C+CSE+Project+%F0%9F%8E%93)](https://git.io/typing-svg)
 
 <br/>
 
@@ -30,7 +30,7 @@
 
 ## 📌 Overview
 
-**TalentLens** is a full-stack **MERN job portal** platform that enables candidates to discover and apply for opportunities while helping recruiters publish openings, manage applications, and streamline the entire hiring process.
+**TalentLens** is a full-stack **MERN-based recruitment platform** that enables candidates to discover and apply for opportunities while helping recruiters publish openings, manage applications, and streamline the entire hiring process.
 
 The platform provides secure authentication, resume uploads, company management, and an admin dashboard for recruiters.
 
