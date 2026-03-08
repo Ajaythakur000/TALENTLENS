@@ -10,7 +10,7 @@ import { Toaster as Sonner } from "sonner"
 
 const Toaster = ({ ...props }) => {
   const { theme = "system" } = useTheme()
-
+//changed the design
   return (
     <>
       <style>{`
