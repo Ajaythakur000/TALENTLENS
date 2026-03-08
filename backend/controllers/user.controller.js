@@ -120,9 +120,10 @@ const updateProfile = asyncHandler(async (req, res) => {
    //cloudinary
   let cloudResponse;
 
-if(req.file){
-   const fileUri = getDataUri(req.file);
-   cloudResponse = await cloudinary.uploader.upload(fileUri.content);
+if (req.file) {
+    const fileUri = getDataUri(req.file);
+    
+    cloudResponse = await cloudinary.uploader.upload(fileUri.content)
 }
     const userId = req.id; 
 
