@@ -489,7 +489,7 @@ const Profile = () => {
                     <div className="pf-resume-ico">📄</div>
                     <div>
                       <div className="pf-resume-name">{user.profile.resumeOriginalName}</div>
-                      <div className="pf-resume-sub">PDF · Click to view</div>
+                      <div className="pf-resume-sub">PDF</div>
                     </div>
                   </div>
                   <a href={user.profile.resume} target="_blank" rel="noreferrer" className="pf-resume-btn">
