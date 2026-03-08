@@ -116,8 +116,7 @@ const updateProfile = asyncHandler(async (req, res) => {
     
     const { fullname, email, phoneNumber, bio, skills } = req.body;
     
-   //File handling (Resume/Photo) hum baad mein Multer se karenge.
-   //cloudinary
+  
   let cloudResponse;
 
 if (req.file) {
