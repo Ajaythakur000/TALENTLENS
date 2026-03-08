@@ -52,7 +52,7 @@ The platform provides secure authentication, resume uploads, company management,
 
 | Applicants Dashboard | Company Registration |
 |:--------------------:|:--------------------:|
-| ![](Screenshots/applicants.png) | ![](Screenshots/companyRegister.png) |
+| ![](Screenshots/applicants.png) | ![](Screenshots/companyregister.png) |
 
 ---
 
