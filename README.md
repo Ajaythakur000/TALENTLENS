@@ -36,7 +36,7 @@ The platform provides secure authentication, resume uploads, company management,
 
 ---
 
-## 📸 Screenshots
+## 📸A few screenshots of the website interface
 
 | Home Page | Jobs Page |
 |:---------:|:---------:|
